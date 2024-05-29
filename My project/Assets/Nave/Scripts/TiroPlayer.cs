@@ -32,6 +32,7 @@ public class TiroPlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Alan"))
         {
+            GameManager.Instancia.AlterarScore(1.948328242168e+13);
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

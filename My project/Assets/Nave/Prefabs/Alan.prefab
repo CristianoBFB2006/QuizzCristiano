@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 2072939272830816778}
   - component: {fileID: 5401617619837325647}
   - component: {fileID: 748563585282618393}
+  - component: {fileID: -8289749895526849612}
   m_Layer: 0
-  m_Name: Alan (16 x 16)_0
+  m_Name: Alan
   m_TagString: Alan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   corpoAlan: {fileID: 2072939272830816778}
   colisorAlan: {fileID: 748563585282618393}
-  velocidade: -10
+  velocidade: -4
 --- !u!61 &748563585282618393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -196,3 +197,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8787847, y: 0.7737315}
   m_EdgeRadius: 0
+--- !u!114 &-8289749895526849612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589474856016351789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554752149c5a02e438fd6b3cfcdbc15f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

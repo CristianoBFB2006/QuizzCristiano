@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7679072350741981546}
   - component: {fileID: 8304276480963646473}
   - component: {fileID: 4779346574432941050}
+  - component: {fileID: 1076112938440462540}
   m_Layer: 0
   m_Name: Player_donut_shot (16 x 16)_0
   m_TagString: Untagged
@@ -196,3 +197,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.29240733, y: 0.29240724}
   m_EdgeRadius: 0
+--- !u!114 &1076112938440462540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7295200796615191021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4345be94547f14b8beaaa7e773a91d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

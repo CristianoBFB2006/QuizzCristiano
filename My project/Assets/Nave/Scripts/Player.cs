@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [Header("Componentes")]
     public Rigidbody2D corpoPlayer;
     public BoxCollider2D colisorPlayer;
+    public Animator animatorPlayer;
 
     [Header("Movimentação")]
     public float inputx;
@@ -51,6 +52,22 @@ public class Player : MonoBehaviour
         if(inputTiro != 0)
         {
             Atirar();
+        }
+
+        if(inputx != 0)
+        {
+            animatorPlayer.SetInteger("Player", 1);
+            if(inputx > 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+        }else
+        {
+            animatorPlayer.SetInteger("Player", 0);
         }
     }
 
