@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instancia;
+
+    [Header("Menu")]
+    public GameObject painelInicio;
+    public GameObject painelGameplay;
+    public GameObject painelGameOver;
 
     [Header("Pontuação")]
     public double score;
@@ -25,6 +31,15 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        painelInicio.SetActive(true);
+        painelGameplay.SetActive(false);
+        painelGameOver.SetActive(false);
+    }
+
+    public void IniciarJogo()
+    {
+        painelInicio.SetActive(false);
+        painelGameplay.SetActive(true);
         StartCoroutine(GerarAlan());
     }
 
@@ -36,7 +51,7 @@ public class GameManager : MonoBehaviour
     public void AlterarScore(double valor)
     {
         score += valor;
-        scoreText.text = "SCORE: " + score;
+        scoreText.text = "Score: " + score;
     }
 
     IEnumerator GerarAlan()
@@ -47,5 +62,16 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GerarAlan());
     }
 
+    public void GameOver()
+    {
+        SceneManager.LoadScene(0);
+    }
 
+    IEnumerator FinalizarJogo()
+    {
+        painelGameplay.SetActive(false);
+        painelGameOver.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(0);
+    }
 }
